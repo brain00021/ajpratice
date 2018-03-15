@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<meta charset=utf-8 />
+<title>ng-model</title>
+</head>
+<body ng-app='myApp' ng-controller="MainCtrl">
+        <div id="demo" ng-init="greeting()"></div>
+        <!-- 只要在你欲顯示的區域範圍內加上ng-init="變數＝‘值’" 若有兩個以上的變數需要設定初始值，則使用分號區隔 -->
+        <button ng-click="green2()">{{person}}</button>
+        <div ng-init="number1 = 'magic hand';number2 = 59645"> {{number1}}{{numbere2}} 測試樣式</div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('Clickfucntion', function($scope) {
+                $scope.Scared = false;
+           
+        });
+
+        app.controller('MainCtrl',function ($scope){
+            $scope.greeting= function(){
+                console.log("hi");
+                document.getElementById("demo").innerHTML = "Paragraph changed!";
+            };
+            $scope.green2 = function(){
+                console.log("test2");
+                document.getElementById("demo").innerHTML = "hahaha test!";
+            };
+            $scope.person="World";
+        });
+
+     
+        
+    </script>
+</body>
+</html>
+
+

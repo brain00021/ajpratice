@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<meta charset=utf-8 />
+<title>ng-model</title>
+</head>
+<body ng-app='myApp' ng-controller="Clickfucntion">
+        Show HTML: <input type="checkbox" ng-model="myVar" value="測試打開">
+        <p ng-hide="messy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolor adipisci. Quas nam molestias reiciendis temporibus officia quidem enim et nemo dolorem! Sed architecto perspiciatis sunt odio beatae, voluptatibus nisi.
+
+        </p>
+        <!-- ng-click去控制反應 -->
+        <a href="" ng-click="showme=true">Show</a>
+        <button ng-click="showme=false">Hide</button> 
+        
+        <div class="wrapper">
+          <p ng-hide="showme">It will appear here!</p>
+          <h2 ng-show="showme">This is mah content, yo!</h2>
+        </div>
+
+        <div ng-show="myVar">
+            <h1>Welcome</h1>
+            <p>Welcome to my home.</p>
+        </div>
+        
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('Clickfucntion', function($scope) {
+                $scope.Scared = false;
+           
+        });
+     
+        
+    </script>
+</body>
+</html>
+
+
